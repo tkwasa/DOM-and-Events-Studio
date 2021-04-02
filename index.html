@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head>  
         <title>Flight Simulator</title>
         <link rel = "stylesheet" type = "text/css" href = "styles.css" />
-        <script src = "scripts.js"></script>
+       <!---- <script src = "scripts.js"></script> -->
+        <script src ="c:\Users\first ash\Desktop\Git-Exercises\Launchcode-exercises\DOM-and-Events-Studio\scripts.js" ></script>
     </head>
     <body>
         <div style="text-align: center;">
@@ -20,21 +21,21 @@
                 <p>Houston, we are ready when you are!</p>
             </div>
             <div id = "shuttleBackground" style = "position: relative;">
-                <img src = "LaunchCode_rocketline_white.png" height = "75" width = "75" id = "rocket"/>
+                <img src = "LaunchCode_rocketline_white.png" height = "75" width = "75" id = "rocket" style = "position: absolute;"/>
             </div>
             <div style = "text-align: center; display: inline-block;">
-                    <button>Up</button>
-                    <button>Down</button>
-                    <button>Right</button>
-                    <button>Left</button>
+                    <button id ="up" onclick="move_img('up')">Up</button>
+                    <button id ="down" onclick="move_img('down')">Down</button>
+                    <button id ="right" onclick="move_img('right')">Right</button>
+                    <button id ="left" onclick="move_img('left')">Left</button>
                     <h3>Space Shuttle Height</h3>
                     <p id="spaceShuttleHeight">0</p><p style = "display: inline-block;"> miles</p>
             </div>
         </div>
         <div style="text-align: center;">
-            <button id = "takeoff">Take off</button>
-            <button id = "landing">Land</button>
-            <button id = "missionAbort">Abort Mission</button>
+            <button id = "takeoff" onclick="confirmReady()">Take off</button>
+            <button id = "landing" onclick="confirmLand()">Land</button>
+            <button id = "missionAbort" onclick="confirmAbort()">Abort Mission</button>
     </div>
     </body>
 </html>
